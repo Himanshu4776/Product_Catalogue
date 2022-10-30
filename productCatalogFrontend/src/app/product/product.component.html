@@ -1,0 +1,29 @@
+<div class="class-container">
+    <div class="text-center">
+        <h2>Product Details</h2>
+    </div>
+    <div class="container">
+        <img src="{{product.productImage}}" alt="product_image" height="300px" width="150px">
+        <div class="desc">
+            <h3>Product code: {{product.code}}</h3>
+            <h3>Name: {{product.productName}}</h3>
+            <h3>Price: {{product.price | currency:'INR'}}</h3>
+            <h3>Brand: {{product.brand}}</h3>
+            <h3>Description: {{product.description}}.</h3>
+            <br>
+            <input type="number" placeholder="Enter Pincode" #pincode>
+            <button class="btn btn-info" type="submit" (click)="servicability(pincode.value)">check availability</button>
+            <!-- To check if product is deliverable -->
+            <ng-template [ngIf]="available === 1">
+                <p>yes, product is deliverable.</p>
+                <p>You can expect delivery within 2 days.</p>
+            </ng-template>
+            <ng-template [ngIf]="available === 0">
+                <p>Product non deliverable at this Pincode.</p>
+            </ng-template>
+            <ng-template [ngIf]="available === 2">
+            </ng-template>
+
+        </div>
+    </div>
+</div>

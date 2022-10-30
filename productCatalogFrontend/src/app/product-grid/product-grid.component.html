@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline" #searchForm="ngForm" (ngSubmit)="searchProduct(searchForm.value)">
+        <input class="form-control mr-sm-2" ngModel type="search" placeholder="Enter Product code" aria-label="Search" name="code">
+        <input class="form-control mr-sm-2" ngModel type="search" placeholder="Enter Brand" aria-label="Search" name="brand">
+        <input class="form-control mr-sm-2" ngModel type="search" placeholder="Enter Name" aria-label="Search" name="productName">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+<br><br>
+<div class="container">
+    <div class="row">
+        <h1 *ngIf="products.length === 0">No Products to display</h1>
+        <div class="col-sm-4" *ngFor="let product of products">
+            <div class="card" >
+                <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                    <img src="{{product.productImage}}" class="img-fluid"/>
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{product.brand}}</p>
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <a (click)="forwardProduct('product',product.code)" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

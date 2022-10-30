@@ -1,0 +1,39 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.main-heading {
+    /* color: brown; */
+    color: #5463FF;
+    text-size-adjust: 60rem;
+}
+
+form {
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    margin: 30px;
+    background-color: #F9F3EE;
+    padding: 60px;
+    border: solid #6A67CE 3px;
+}
+
+input {
+    /* width: 450px; */
+    /* height: 40px; */
+    padding: 20px;
+    /* margin: 20px; */
+    text-align: center;
+    justify-content: center;
+    /* padding-left: 80px; */
+}
+
+/* .gradient-custom {
+    
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+} 
+*/

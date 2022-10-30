@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 class="heading" routerLink="">{{heading}}</h1>
+<button class="logoutBtn" *ngIf="logcheck()" (click)="logoutUser()"><i class="bi bi-box-arrow-left"></i> logout</button>
+<router-outlet></router-outlet>

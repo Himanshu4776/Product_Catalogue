@@ -1,0 +1,34 @@
+.card {
+    margin: 10px;
+    background-color: #5463FF;
+    /* background-color: rgb(228, 223, 223); */
+    padding: 60px;
+    border: solid #6A67CE 3px;
+    border-radius: 10px;
+}
+ 
+h1 {
+    /* color: rgb(69, 238, 145); */
+    color: whitesmoke;
+}
+
+h4 {
+    color: red;
+}
+
+p {
+    color: whitesmoke;
+}
+
+a {
+    color: #ECECEC;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+}
+
+.container-fluid {
+    text-align: center;
+}

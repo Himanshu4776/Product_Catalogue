@@ -1,0 +1,18 @@
+.productPage {
+    background-color: #F9F3EE;
+    padding: 30px;
+    border: solid #6A67CE 3px;
+    color: red;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+}
+/* 
+img {
+    width: 450px;
+} */
+
+img {
+    width: 600px;
+}

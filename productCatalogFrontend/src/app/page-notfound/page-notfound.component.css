@@ -1,0 +1,24 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+img {
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goBackBtn {
+    color: rgb(63, 35, 219);
+    background-color: #FCF8E8;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    border: solid 0.5px #111;
+}
+
+.pg {
+    display: flex;
+    flex-direction: column;
+}

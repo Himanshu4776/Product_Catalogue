@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-fluid p-3">
+    <div class="row w-100 d-flex justify-content-center align-items-center main-div">
+      <div class="col-12 col-md-8 col-lg-6 col-xxl-5">
+        <div class="card py-3 px-2">
+          <div class="division">
+            <div class="row">
+              <div class="col-6 mx-auto mb-4 text-center">
+                <span class="main-heading"><h1>Login Form</h1></span>
+              </div>
+            </div>
+            <!-- <form class="form" #loginBox="ngForm" (ngSubmit)="login(loginBox.value)">
+              <div *ngIf="alertError" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{errorMsg}}</strong>
+                <button (click)="closeAlertError()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-xmark" (click)="closeAlertError()">clr</i></button>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input type="text" placeholder="UserName" [(ngModel)]="user.name" id="username" name='username'>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input type="password" placeholder="Password" [(ngModel)]="user.password" id="password" name='password'>
+                </div>
+              </div>
+              <p>New User? <a routerLink="/register">click here</a></p>
+              <div class="my-3 d-grid gap-2">
+                <button type="submit" class="btn btn-primary" (click)="createError()">
+                  <small><i class="bi bi-door-open-fill"></i> Login</small>
+                </button>
+              </div>
+            </form>      -->
+
+
+            <!-- New form -->
+            <form #userForm = "ngForm" (ngSubmit)="onlogin()">
+              <div *ngIf="alertError" class="alert alert-warning" role="alert">
+                <strong>{{errorMsg}}  </strong>
+                <button (click)="closeAlertError()" type="button" class="btn-close" aria-label="Close"> clr</button>
+                <!-- <button (click)="closeAlertError()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-xmark" (click)="closeAlertError()">clr</i></button> -->
+              </div>
+              <div class="mb-3">
+                <div class="form-group">  
+                  <label for="Username"> Enter Username </label>
+                  <input #name="ngModel" type="text" class="form-control form-control-sm"  name="name" [(ngModel)] = "user.name">
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">  
+                  <label for="Password">Enter Password </label>   
+                  <input #password="ngModel" type="password" class="form-control form-control-sm" id="exampleInputPassword1" name="password" [(ngModel)] = "user.password">
+                </div>
+              </div>
+              <p>New User? <a routerLink="/register">click here</a></p>
+              <div class="my-3 d-grid gap-2">
+                <button type="submit" class="btn btn-primary" (click)="createError()">
+                  <small><i class="bi bi-door-open-fill"></i> Login</small>
+                </button>
+              </div>
+              <!-- <button type="submit" class="btn btn-primary btn-block"> Sign in </button> -->
+              <!-- <div class="sign-up">  
+                  Don't have an account? <a routerLink="/register"> Create One </a>  
+              </div>   -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

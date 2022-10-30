@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row w-100 d-flex justify-content-center align-items-center main-div">
+      <div class="col-12 col-md-8 col-lg-6 col-xxl-5">
+        <!-- svg here -->
+        <!-- <img src="src/assets/undraw_unlock_re_a558.svg" alt=""> -->
+        <div class="card py-3 px-2">
+          <div class="division">
+            <div class="row">
+              <div class="col-6 mx-auto mb-4 text-center">
+                <span class="main-heading"><h1>Register User</h1></span>
+              </div>
+            </div>
+            <form class="form" #registerBox="ngForm" (ngSubmit)="register(registerBox.value)">
+              <div *ngIf="alertError" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{errorMsg}}</strong>
+                <button (click)="closeAlertError()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-xmark" (click)="closeAlertError()">clr</i></button>
+              </div>
+              <div class="mb-3">
+                  <div class="form-group">
+                  <input #name="ngModel" type="text" ngModel  placeholder="User name" name='name' required>
+                  <h4 *ngIf="name.invalid && name.touched">field is required</h4>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input #firstname="ngModel" type="text" ngModel placeholder="First name" name='firstname' required>
+                  <h4 *ngIf="firstname.invalid && firstname.touched">field is required</h4>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input #lastname="ngModel" type="text" ngModel placeholder="Last Name" name='lastname' required>
+                  <h4 *ngIf="lastname.invalid && lastname.touched">field is required</h4>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input #password="ngModel" type="password" ngModel placeholder="Password" name='password'required>
+                  <h4 *ngIf="password.invalid && password.touched">field is required</h4>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-group">
+                  <input #cnfpassword="ngModel" type="password" ngModel placeholder="Confirm Password" name='cnfPassword' required>
+                  <h4 *ngIf="cnfpassword.invalid && cnfpassword.touched">field is required</h4>
+                </div>
+              </div>
+              <p> Already have an account? <a routerLink="/login">click here</a></p>
+              <div class="my-3 d-grid gap-2">
+                <button *ngIf="name.invalid || firstname.invalid || lastname.invalid ||
+                 password.invalid || cnfpassword.invalid" type="button" class="btn btn-lg btn-success" disabled>
+                  <small><i class="fa fa-user px-2"></i>Register</small>
+                </button>
+                <button *ngIf="name.valid && firstname.valid && lastname.valid &&
+                password.valid && cnfpassword.valid" type="submit" class="btn btn-success" >
+                  <small><i class="fa fa-user px-2"></i>Register</small>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

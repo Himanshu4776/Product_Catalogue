@@ -1,0 +1,17 @@
+img {
+    width: 450px;
+    display: block;
+    /* border-radius: 10px; */
+    /* border-width: 30px; */
+    /* resize: vertical; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    margin: 5px;
+}

@@ -1,0 +1,14 @@
+Some Assumptions are taken while creating this Project.
+1) All the Products have same several pincodes. Product will be delivered only on those pincodes which are:
+	a) 1001
+	b) 1002
+	c) 1004
+	d) 1010
+
+2) Every product will be delivered in 2 days as per standard delivery policy.
+
+3) Products can be stored only manually by the admin.
+
+4) Product Image should be given to the database in a Url format only.
+
+5) Backend will run on 8080 port and Frontend will run on 4200 port only.
