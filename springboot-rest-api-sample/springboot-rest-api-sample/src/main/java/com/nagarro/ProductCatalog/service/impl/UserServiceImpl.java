@@ -39,7 +39,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User save(User user) {
 		// TODO Auto-generated method stub
-//		return userRepository.save(user);
 		if(findByName(user.getName()) == user) {
 			return null;
 		}

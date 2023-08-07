@@ -31,9 +31,4 @@ public interface ProductRepository extends JpaRepository<Product, Long>{
 	
 	@Query("select p from Product p where p.code = :code and p.brand = :brand and p.productName = :productName")
 	public List<Product>findByCodeAndBrandAndName(@Param("code") long code,@Param("brand") String brand,@Param("productName") String productName);
-//	public int[] deliveryPincodes = {1001,1002,1004,1100};
-	
-//	@Query("select p from Product p where p.price > :minvalue and p.price < :maxvalue")
-//	public List<Product>findByPriceFilter(@Param("price") long minvalue, @Param("price") long maxvalue);
-//	
 }

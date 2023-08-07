@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nagarro.ProductCatalog.model.Product;
 import com.nagarro.ProductCatalog.service.ProductService;
 import com.nagarro.ProductCatalog.service.impl.ProductServiceImpl;
-//import com.nagarro.ProductCatalog.dao.ProductRepository;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -80,13 +79,7 @@ public class ProductController {
         	return null;
         }
     }
-//    
-//     Search product on product name, code, brand
-//    @GetMapping("/{code}/{brand}/{name}")
-//    public List<Product> searchProduct(@PathVariable("code") long code,@PathVariable("brand") String brand, @PathVariable("name") String name) {
-//    	return this.productService.searchProduct(code,brand,name);
-//    }
-    
+
     @PostMapping("/search")
     public List<Product> searchProduct(@RequestBody Product product) {
     	try {
@@ -120,17 +113,4 @@ public class ProductController {
         	return null;
         }
     }
-//    Price Filter Api
-//    @GetMapping("/filter/{minvalue}/{maxvalue}")
-//    public List<Product>productFilter(@PathVariable("minvalue") long minvalue, @PathVariable("maxvalue") long maxvalue) {
-//		return this.productService.findByPriceFilter(minvalue, maxvalue);
-//    	
-//    }
-    
-    
-//    // Servicability api
-//    @GetMapping("/servicability/{pincode}")
-//    public Boolean servicability(@PathVariable("pincode") int pincode) {
-//    	return this.productService.pincode(pincode);
-//    }
 }

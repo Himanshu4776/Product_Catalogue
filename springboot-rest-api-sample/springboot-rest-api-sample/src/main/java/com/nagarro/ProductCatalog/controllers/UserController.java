@@ -53,13 +53,7 @@ public class UserController {
 			return null;
 		}
 	}
-	
-//	// get user by user_id
-//	@GetMapping("/{id}")
-//	public User getUserById(@PathVariable("id") long userId) {
-//		return (User) this.userRepository.findById(userId);
-//	}
-//	
+
 	//get user by username
 	@GetMapping("/{name}")
 	public ResponseEntity<User> getUserByName(@PathVariable("name") String userName) {
@@ -80,17 +74,6 @@ public class UserController {
 			return null;
 		}
 	}
-	
-	// login API
-//	@PostMapping("/login")
-//	public ResponseEntity<User> login(@RequestBody User user) {
-//		try {
-//			return new ResponseEntity<User>(userService.findByNameAndPassword(user.getName(), user.getPassword()), HttpStatus.OK);
-//		}
-//		catch (Exception e) {
-//			return null;
-//		}
-//	}
 	
 	// login By other
 	@PostMapping("/login")

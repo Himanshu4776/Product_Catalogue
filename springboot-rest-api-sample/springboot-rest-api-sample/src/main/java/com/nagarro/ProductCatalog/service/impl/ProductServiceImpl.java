@@ -94,22 +94,4 @@ public class ProductServiceImpl implements ProductService {
 		}
 	}
 
-//	@Override
-//	public List<Product> findByPriceFilter(long minvalue, long maxvalue) {
-//		// TODO Auto-generated method stub
-//		return productRepository.findByPriceFilter(minvalue, maxvalue);
-//	}
-
-
-//	@Override
-//	public Boolean pincode(int pincode) {
-//		// TODO Auto-generated method stub
-//		for(int i=0;i<productRepository.deliveryPincodes.length; i++) {
-//			if(productRepository.deliveryPincodes[i] == pincode) {
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-
 }

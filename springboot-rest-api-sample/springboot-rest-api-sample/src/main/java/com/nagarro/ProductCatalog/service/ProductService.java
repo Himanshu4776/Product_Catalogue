@@ -13,7 +13,4 @@ public interface ProductService {
 	long getProductPriceByCode(long code);
 	Map<Long, Long> getAllProductPrice();
 	List<Product> searchProduct(long code,String brand,String productName);
-//	List<Product>findByName(String name);
-//	Boolean pincode(int pincode);
-//	List<Product>findByPriceFilter(long minvalue, long maxvalue);
 }
